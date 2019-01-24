@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>JavaScript中Promise使用 | JavaScript中Promise使用</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="定义Promise对象用于包装异步函数执行结果，以便用同步的方式处理其结果。 12345var mypromise = new Promise(function(resolve, reject)&amp;#123; // asynchronous code to run here // call resolve() to indicate task successfully completed // ca">
+<meta name="keywords" content="JavaScript,Promise">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript中Promise使用">
+<meta property="og:url" content="http://yoursite.com/2019/01/24/JavaScript中Promise使用/index.html">
+<meta property="og:site_name" content="JavaScript中Promise使用">
+<meta property="og:description" content="定义Promise对象用于包装异步函数执行结果，以便用同步的方式处理其结果。 12345var mypromise = new Promise(function(resolve, reject)&amp;#123; // asynchronous code to run here // call resolve() to indicate task successfully completed // ca">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-24T09:24:29.618Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript中Promise使用">
+<meta name="twitter:description" content="定义Promise对象用于包装异步函数执行结果，以便用同步的方式处理其结果。 12345var mypromise = new Promise(function(resolve, reject)&amp;#123; // asynchronous code to run here // call resolve() to indicate task successfully completed // ca">
+  
+    <link rel="alternate" href="/atom.xml" title="JavaScript中Promise使用" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">JavaScript中Promise使用</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="default_layout-JavaScript中Promise使用" class="article article-type-default_layout" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/24/JavaScript中Promise使用/" class="article-date">
+  <time datetime="2019-01-24T09:19:36.000Z" itemprop="datePublished">2019-01-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript中Promise使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>Promise对象用于包装异步函数执行结果，以便用同步的方式处理其结果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mypromise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>)</span>&#123;</span><br><span class="line"> <span class="comment">// asynchronous code to run here</span></span><br><span class="line"> <span class="comment">// call resolve() to indicate task successfully completed</span></span><br><span class="line"> <span class="comment">// call reject() to indicate task has failed </span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mypromise.then(</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">successurl</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">'doggyplayground'</span>).innerHTML = <span class="string">'&lt;img src="'</span> + successurl + <span class="string">'" /&gt;'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params">errorurl</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'Error loading '</span> + errorurl)</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>promise 包含3种状态：</p>
+<p><strong>pending</strong>： 初始状态</p>
+<p><strong>fulfilled</strong>:  完成状态</p>
+<p><strong>rejected</strong>: 失败状态</p>
+<h2 id="链式调用方法"><a href="#链式调用方法" class="headerlink" title="链式调用方法"></a>链式调用方法</h2><p>then()返回一个Promise对象 或者构造一个空白的Promise对象（如Promise.resolve()返回一个初始状态是fulfilled的延迟对象）</p>
+<h2 id="处理延迟对象数组"><a href="#处理延迟对象数组" class="headerlink" title="处理延迟对象数组"></a>处理延迟对象数组</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> twodoggypromises = [getImage(<span class="string">'dog1.png'</span>), getImage(<span class="string">'dog2.png'</span>)]</span><br><span class="line"><span class="built_in">Promise</span>.all(twodoggypromises).then(<span class="function"><span class="keyword">function</span>(<span class="params">urls</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(urls) <span class="comment">// logs ['dog1.png', 'dog2.png']</span></span><br><span class="line">&#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">urls</span>)</span>&#123; <span class="comment">// if any image fails to load, then() is skipped and catch is called</span></span><br><span class="line">    <span class="built_in">console</span>.log(urls) <span class="comment">// returns array of images that failed to load</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Promise.all([]) 参数传入Promise对象数组 then中得到结果的数组<br>Promise.all() takes an iterable (array or array-like list) of promise objects, and waits until all of those promises have been fulfilled before moving on to any then() method attached to it. The then() method is passed an array of returned values from each promise.</p>
+<h2 id="解决Promise数组-有一个执行失败-就进入catch问题"><a href="#解决Promise数组-有一个执行失败-就进入catch问题" class="headerlink" title="解决Promise数组 有一个执行失败 就进入catch问题"></a>解决Promise数组 有一个执行失败 就进入catch问题</h2><p><strong>使用map</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> doggies = [<span class="string">'dog1.png'</span>, <span class="string">'dog2.png'</span>, <span class="string">'dog3.png'</span>, <span class="string">'dog4.png'</span>, <span class="string">'dog5.png'</span>]</span><br><span class="line"><span class="keyword">var</span> doggypromises = doggies.map(getImage) <span class="comment">// call getImage on each array element and return array of promises</span></span><br><span class="line"><span class="keyword">var</span> sequence = <span class="built_in">Promise</span>.resolve()</span><br><span class="line"> </span><br><span class="line">doggypromises.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">curPromise</span>)</span>&#123; <span class="comment">// create sequence of promises to act on each one in succession</span></span><br><span class="line">    sequence = sequence.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> curPromise</span><br><span class="line">    &#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">url</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> dog = <span class="built_in">document</span>.createElement(<span class="string">'img'</span>)</span><br><span class="line">        dog.setAttribute(<span class="string">'src'</span>, url)</span><br><span class="line">        doggyplayground.appendChild(dog)</span><br><span class="line">    &#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err + <span class="string">' failed to load!'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/24/JavaScript中Promise使用/" data-id="cjraey5vd0000qcvd24pkhfzq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/01/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/24/JavaScript中Promise使用/">JavaScript中Promise使用</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/24/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Cruz<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
